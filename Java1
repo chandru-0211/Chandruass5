@@ -1,0 +1,32 @@
+// Program: Frame using Absolute Positioning
+// Subject: OOPS Java
+
+import javax.swing.*;
+
+public class AbsoluteFrame {
+
+    public static void main(String[] args) {
+
+        JFrame frame = new JFrame("Absolute Position Example");
+        frame.setSize(400, 300);
+        frame.setLayout(null);   // NO LAYOUT MANAGER (absolute)
+
+        // Create components
+        JLabel lblName = new JLabel("Name:");
+        JTextField txtName = new JTextField();
+        JButton btnSubmit = new JButton("Submit");
+
+        // Set exact positions (x, y, width, height)
+        lblName.setBounds(50, 50, 100, 30);
+        txtName.setBounds(150, 50, 150, 30);
+        btnSubmit.setBounds(150, 120, 100, 30);
+
+        // Add to frame
+        frame.add(lblName);
+        frame.add(txtName);
+        frame.add(btnSubmit);
+
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setVisible(true);
+    }
+}
